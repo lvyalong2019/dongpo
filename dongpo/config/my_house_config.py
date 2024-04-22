@@ -8,8 +8,13 @@ v2_threshold = 2000
 def v0_config_init():
     shellConfigs = [
         client.ShellConfig(
-            '新城璞樾门第-16000',
+            '新城璞樾门第130-16000',
             'https://wh.ke.com/ershoufang/co41lc2lc3l4bp0ep300c3720040449813267/?sug=%E6%96%B0%E5%9F%8E%E7%92%9E%E6%A8%BE%E9%97%A8%E7%AC%AC',
+            130, 101, 16000 + v1_threshold,
+            config.my_feishu_url, 1),
+        client.ShellConfig(
+            '新城璞樾门第109-16000',
+            'https://wh.ke.com/ershoufang/co41lc2lc3ba0ea115l3bp0ep300c3720040449813267/?sug=%E6%96%B0%E5%9F%8E%E7%92%9E%E6%A8%BE%E9%97%A8%E7%AC%AC',
             130, 101, 16000 + v1_threshold,
             config.my_feishu_url, 1),
         client.ShellConfig(
@@ -23,9 +28,9 @@ def v0_config_init():
             131, 100, 14000 + v1_threshold,
             config.my_feishu_url, 1),
         client.ShellConfig(
-            '绿地光谷中心城-17000',
+            '绿地光谷中心城-16000',
             'https://wh.ke.com/ershoufang/co41lc2lc3ba110ea10000l3l4bp0ep300c3720027677856744/?sug=%E7%BB%BF%E5%9C%B0%E5%85%89%E8%B0%B7%E4%B8%AD%E5%BF%83%E5%9F%8E',
-            123, 91, 17000 + v1_threshold,
+            123, 91, 16000 + v1_threshold,
             config.my_feishu_url, 1),
         client.ShellConfig(
             '联投驿园一期-18000',
