@@ -31,15 +31,18 @@ def query_total_price(e):
 
 
 def query_house_lists(shellConfig):
+    houseList = []
+
     # 01-获取网页原始信息
     rep = requests.get(shellConfig.house_url)
     html = rep.text
     html = re.sub('\\s', '', html)
-    htmlListContent = re.findall(r'<ulclass="sellListContent"log-mod="list">(.*?)</ul>', html)[0]
-    htmlLists = re.findall(r'<liclass="clear">(.*?)</li>', htmlListContent)
+    if html == '':
+        return houseList
+    htmlListContents = re.findall(r'<ulclass="sellListContent"log-mod="list">(.*?)</ul>', html)
+    htmlLists = re.findall(r'<liclass="clear">(.*?)</li>', htmlListContents[0])
 
     # 02-将原始信息初始化成列表
-    houseList = []
     for html in htmlLists:
         try:
             totalPrice = re.findall(r'<divclass="totalPricetotalPrice2"><i></i><spanclass="">(.*?)</span><i>', html)[0]

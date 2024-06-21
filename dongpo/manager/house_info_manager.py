@@ -35,6 +35,8 @@ def query_house_info(shellConfigs):
     # 01-获取房屋列表
     for shellConfig in shellConfigs:
         houseList = client.query_house_lists(shellConfig)
+        if houseList == []:
+            continue
 
         # 02-本地打印
         table = PrettyTable(
@@ -56,7 +58,7 @@ def query_house_info(shellConfigs):
             num += 1
         client.send_msg(shellConfig.feishu_url,
                         client.get_post_data(build_house_title(shellConfig), content))
-        time.sleep(3)
+        time.sleep(10)
 
 
 if __name__ == '__main__':

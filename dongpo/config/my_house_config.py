@@ -32,21 +32,21 @@ def v0_config_init():
             'https://wh.ke.com/ershoufang/co41lc2lc3ba110ea10000l3l4bp0ep300c3720027677856744/?sug=%E7%BB%BF%E5%9C%B0%E5%85%89%E8%B0%B7%E4%B8%AD%E5%BF%83%E5%9F%8E',
             123, 91, 16000 + v1_threshold,
             config.my_feishu_url, 1),
-        client.ShellConfig(
-            '联投驿园一期-18000',
-            'https://wh.ke.com/ershoufang/co41lc2lc3ba120ea10000l3l4bp0ep300c3718091092225251/?sug=%E8%81%94%E6%8A%95%E9%A9%BF%E5%9B%AD',
-            125, 95, 18000 + v1_threshold,
-            config.my_feishu_url, 1),
-        client.ShellConfig(
-            '联投驿园二期-18000',
-            'https://wh.ke.com/ershoufang/co41lc2lc3ba120ea10000l3l4bp0ep300c37000000069193/?sug=%E8%81%94%E6%8A%95%E9%A9%BF%E5%9B%AD%E4%BA%8C%E6%9C%9F',
-            125, 97, 18000 + v1_threshold,
-            config.my_feishu_url, 1),
-        client.ShellConfig(
-            '光谷188国际社区-18000',
-            'https://wh.ke.com/ershoufang/co41lc2lc3ba120ea10000l3l4bp0ep300c3714278395965542/?sug=%E5%85%89%E8%B0%B7188%E5%9B%BD%E9%99%85%E7%A4%BE%E5%8C%BA',
-            141, 106, 18000 + v1_threshold,
-            config.my_feishu_url, 1),
+        # client.ShellConfig(
+        #     '联投驿园一期-18000',
+        #     'https://wh.ke.com/ershoufang/co41lc2lc3ba120ea10000l3l4bp0ep300c3718091092225251/?sug=%E8%81%94%E6%8A%95%E9%A9%BF%E5%9B%AD',
+        #     125, 95, 18000 + v1_threshold,
+        #     config.my_feishu_url, 1),
+        # client.ShellConfig(
+        #     '联投驿园二期-18000',
+        #     'https://wh.ke.com/ershoufang/co41lc2lc3ba120ea10000l3l4bp0ep300c37000000069193/?sug=%E8%81%94%E6%8A%95%E9%A9%BF%E5%9B%AD%E4%BA%8C%E6%9C%9F',
+        #     125, 97, 18000 + v1_threshold,
+        #     config.my_feishu_url, 1),
+        # client.ShellConfig(
+        #     '光谷188国际社区-18000',
+        #     'https://wh.ke.com/ershoufang/co41lc2lc3ba120ea10000l3l4bp0ep300c3714278395965542/?sug=%E5%85%89%E8%B0%B7188%E5%9B%BD%E9%99%85%E7%A4%BE%E5%8C%BA',
+        #     141, 106, 18000 + v1_threshold,
+        #     config.my_feishu_url, 1),
     ]
     return shellConfigs
 
