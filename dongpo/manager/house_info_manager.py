@@ -43,9 +43,6 @@ def query_house_info(shellConfigs):
             retry = retry - 1
             time.sleep(60)
 
-        if houseList == []:
-            continue
-
         # 02-本地打印
         table = PrettyTable(
             ['编号', '详情', '总价（万）', '均价（元）', '预估实际面积（平方米）', '预估实际均价（元）', '预估公摊率', '描述',
