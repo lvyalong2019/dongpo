@@ -34,7 +34,15 @@ def build_house_info(house, num, lastLine):
 def query_house_info(shellConfigs):
     # 01-获取房屋列表
     for shellConfig in shellConfigs:
-        houseList = client.query_house_lists(shellConfig)
+        retry = 3
+        houseList = []
+        while retry > 0:
+            houseList = client.query_house_lists(shellConfig)
+            if houseList != []:
+                break
+            retry = retry - 1
+            time.sleep(60)
+
         if houseList == []:
             continue
 
@@ -46,6 +54,7 @@ def query_house_info(shellConfigs):
             table.add_row(house)
         print(shellConfig.name)
         print(table)
+        print(datetime.datetime.now())
 
         # 03-发消息
         content = []
@@ -62,4 +71,4 @@ def query_house_info(shellConfigs):
 
 
 if __name__ == '__main__':
-    query_house_info(config.test_config_init())
+    query_house_info(config.v0_config_init())

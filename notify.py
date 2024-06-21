@@ -22,9 +22,9 @@ if __name__ == '__main__':
     schedule.every().day.at('08:03').do(manager.query_house_info, config.v0_config_init())
 
     # 通用客户的任务
-    schedule.every().friday.at('12:13').do(manager.query_house_info, config.ggd_config_init())
-    schedule.every().friday.at('12:23').do(manager.query_house_info, config.gs_config_init())
-    schedule.every().friday.at('12:33').do(manager.query_house_info, config.yjw_config_init())
+    schedule.every().friday.at('12:03').do(manager.query_house_info, config.ggd_config_init())
+    schedule.every().friday.at('12:13').do(manager.query_house_info, config.gs_config_init())
+    schedule.every().friday.at('12:23').do(manager.query_house_info, config.yjw_config_init())
 
     # 定制化客户的任务
     schedule.every().day.at('09:13').do(manager.query_house_info, config.wenjie_config_init())

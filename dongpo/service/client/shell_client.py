@@ -38,6 +38,7 @@ def query_house_lists(shellConfig):
     html = rep.text
     html = re.sub('\\s', '', html)
     if html == '':
+        print("error, request: " + str(shellConfig) + ",response: " + str(rep))
         return houseList
     htmlListContents = re.findall(r'<ulclass="sellListContent"log-mod="list">(.*?)</ul>', html)
     htmlLists = re.findall(r'<liclass="clear">(.*?)</li>', htmlListContents[0])
