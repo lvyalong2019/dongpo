@@ -34,7 +34,9 @@ def query_house_lists(shellConfig):
     houseList = []
 
     # 01-获取网页原始信息
-    rep = requests.get(shellConfig.house_url)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'}
+    rep = requests.get(shellConfig.house_url, headers=headers)
     html = rep.text
     html = re.sub('\\s', '', html)
     if html == '':
